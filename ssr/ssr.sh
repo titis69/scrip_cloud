@@ -23,7 +23,7 @@ echo -e "${NC}${LIGHT}Fuck You!!"
 exit 0
 fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssr"
+akbarvpn="raw.githubusercontent.com/titis69/scrip_cloud/main/ssr"
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
@@ -50,30 +50,30 @@ Error="${Red_font_prefix}[error]${Font_color_suffix}"
 Tip="${Green_font_prefix}[note]${Font_color_suffix}"
 Separator_1="——————————————————————————————"
 check_pid(){
-	PID=`ps -ef |grep -v grep | grep server.py |awk '{print $2}'`
+    PID=`ps -ef |grep -v grep | grep server.py |awk '{print $2}'`
 }
 Add_iptables(){
-		iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 1443:1543 -j ACCEPT
-		iptables -I INPUT -m state --state NEW -m udp -p udp --dport 1443:1543 -j ACCEPT
+   	 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 1443:1543 -j ACCEPT
+   	 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 1443:1543 -j ACCEPT
 }
 Save_iptables(){
 if [[ ${OS} == "centos" ]]; then
-		service iptables save
-		service ip6tables save
+   	 service iptables save
+   	 service ip6tables save
 else
-		iptables-save > /etc/iptables.up.rules
+   	 iptables-save > /etc/iptables.up.rules
 fi
 }
 Set_iptables(){
 if [[ ${OS} == "centos" ]]; then
-		service iptables save
-		service ip6tables save
-		chkconfig --level 2345 iptables on
-		chkconfig --level 2345 ip6tables on
+   	 service iptables save
+   	 service ip6tables save
+   	 chkconfig --level 2345 iptables on
+   	 chkconfig --level 2345 ip6tables on
 else
-		iptables-save > /etc/iptables.up.rules
-		echo -e '#!/bin/bash\n/sbin/iptables-restore < /etc/iptables.up.rules\n/sbin/ip6tables-restore < /etc/ip6tables.up.rules' > /etc/network/if-pre-up.d/iptables
-		chmod +x /etc/network/if-pre-up.d/iptables
+   	 iptables-save > /etc/iptables.up.rules
+   	 echo -e '#!/bin/bash\n/sbin/iptables-restore < /etc/iptables.up.rules\n/sbin/ip6tables-restore < /etc/ip6tables.up.rules' > /etc/network/if-pre-up.d/iptables
+   	 chmod +x /etc/network/if-pre-up.d/iptables
 fi
 }
 Set_user_api_server_pub_addr(){
@@ -81,7 +81,7 @@ ip=$(wget -qO- ipv4.icanhazip.com);
 ssr_server_pub_addr="${ip}"
 }
 Modify_user_api_server_pub_addr(){
-	sed -i "s/SERVER_PUB_ADDR = '${server_pub_addr}'/SERVER_PUB_ADDR = '${ssr_server_pub_addr}'/" ${config_user_api_file}
+    sed -i "s/SERVER_PUB_ADDR = '${server_pub_addr}'/SERVER_PUB_ADDR = '${ssr_server_pub_addr}'/" ${config_user_api_file}
 }
 Check_python(){
 if [[ ${OS} == "centos" ]]; then
@@ -96,29 +96,29 @@ apt-get install -y python
 fi
 }
 Centos_yum(){
-	yum update
-	cat /etc/redhat-release |grep 7\..*|grep -i centos>/dev/null
-	if [[ $? = 0 ]]; then
-		yum install -y vim unzip crond net-tools git
-	else
-		yum install -y vim unzip crond git
-	fi
+    yum update
+    cat /etc/redhat-release |grep 7\..*|grep -i centos>/dev/null
+    if [[ $? = 0 ]]; then
+   	 yum install -y vim unzip crond net-tools git
+    else
+   	 yum install -y vim unzip crond git
+    fi
 }
 Debian_apt(){
-	apt-get update
-	apt-get install -y vim unzip cron git net-tools
+    apt-get update
+    apt-get install -y vim unzip cron git net-tools
 }
 Download_SSR(){
-	cd "/usr/local"
-	git clone -b akkariiin/master https://github.com/shadowsocksrr/shadowsocksr.git
-	cd "shadowsocksr"
-	cp "${ssr_folder}/config.json" "${config_user_file}"
-	cp "${ssr_folder}/mysql.json" "${ssr_folder}/usermysql.json"
-	cp "${ssr_folder}/apiconfig.py" "${config_user_api_file}"
-	sed -i "s/API_INTERFACE = 'sspanelv2'/API_INTERFACE = 'mudbjson'/" ${config_user_api_file}
-	server_pub_addr="127.0.0.1"
-	Modify_user_api_server_pub_addr
-	sed -i 's/ \/\/ only works under multi-user mode//g' "${config_user_file}"
+    cd "/usr/local"
+    git clone -b akkariiin/master https://github.com/shadowsocksrr/shadowsocksr.git
+    cd "shadowsocksr"
+    cp "${ssr_folder}/config.json" "${config_user_file}"
+    cp "${ssr_folder}/mysql.json" "${ssr_folder}/usermysql.json"
+    cp "${ssr_folder}/apiconfig.py" "${config_user_api_file}"
+    sed -i "s/API_INTERFACE = 'sspanelv2'/API_INTERFACE = 'mudbjson'/" ${config_user_api_file}
+    server_pub_addr="127.0.0.1"
+    Modify_user_api_server_pub_addr
+    sed -i 's/ \/\/ only works under multi-user mode//g' "${config_user_file}"
 }
 Service_SSR(){
 if [[ ${OS} = "centos" ]]; then
@@ -139,17 +139,17 @@ chmod +x ${jq_file}
 }
 Installation_dependency(){
 if [[ ${OS} == "centos" ]]; then
-		Centos_yum
-		service crond restart
-	else
-		Debian_apt
-		/etc/init.d/cron restart
-	fi
+   	 Centos_yum
+   	 service crond restart
+    else
+   	 Debian_apt
+   	 /etc/init.d/cron restart
+    fi
 }
 Start_SSR(){
-	check_pid
-	wget -O /etc/init.d/ssrmu "https://${akbarvpn}/ssrmu"
-	/etc/init.d/ssrmu start
+    check_pid
+    wget -O /etc/init.d/ssrmu "https://${akbarvpn}/ssrmu"
+    /etc/init.d/ssrmu start
 }
 Install_SSR(){
 Set_user_api_server_pub_addr
@@ -170,3 +170,6 @@ wget -O /usr/bin/delssr https://${akbarvpn}/delssr.sh && chmod +x /usr/bin/delss
 wget -O /usr/bin/renewssr https://${akbarvpn}/renewssr.sh && chmod +x /usr/bin/renewssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
+
+
+
