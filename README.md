@@ -11,9 +11,9 @@ Auto Script Install All VPN Service
 Mod By SL
 <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"></h2>
 
-</p> 
+</p>
 <h2 align="center"> Supported Linux Distribution</h2>
-<p align="center"><img src="https://d33wubrfki0l68.cloudfront.net/5911c43be3b1da526ed609e9c55783d9d0f6b066/9858b/assets/img/debian-ubuntu-hover.png"></p> 
+<p align="center"><img src="https://d33wubrfki0l68.cloudfront.net/5911c43be3b1da526ed609e9c55783d9d0f6b066/9858b/assets/img/debian-ubuntu-hover.png"></p>
 <p align="center"><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%209&message=Stretch&color=purple"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%2010&message=Buster&color=purple">  <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2018&message=Lts&color=red"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2020&message=Lts&color=red">
 </p>
 
@@ -24,7 +24,7 @@ Mod By SL
 https://github.com/fisabiliyusri/XRAY-MANTAP
 ### Script Khusus Xray Multi Port TERBARU
 
-### Link Grup FB: 
+### Link Grup FB:
 https://www.facebook.com/groups/1880372362109422/?ref=share
 ### Info:
 * HARAP DI BACA & UTAMAKAN MEMBACA
@@ -51,7 +51,7 @@ su
 https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 ```
 
-## INFO TAMBAHAN , SILAHKAN DI BACA 
+## INFO TAMBAHAN , SILAHKAN DI BACA
 * MINIMAL RAM 1 GB UNTUK MENGGUNAKAN SCRIPT INI
 * MAAF PROXY SQUID NYA SAYA HAPUS, silahkan edit script ini secara manual
 
@@ -60,20 +60,20 @@ https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 atau
 * • Ubuntu 18.04 & 20.04
 * Working For VPS AWS,AZURE,DO
-## Installation 
+## Installation
 ## 1.
 <img src="https://img.shields.io/badge/Update%20_&_%20Upgrade-green">
 
   ```html
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
-  
+ 
 ## 2.0
 <img src="https://img.shields.io/badge/Login_Root%20VPS-green">
 
 * Login ke VPS dan Aktifkan Root Sementara
 
-  
+ 
 ```html
 sudo su
 cd
@@ -88,10 +88,10 @@ cd
 * Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
    
 ```html
-  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
-  
+  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/titis69/scrip_cloud/main/vpsroot.sh && bash vpsroot.sh
+ 
 ```
-  
+ 
 ### 3.
 
   <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20-green">
@@ -99,10 +99,10 @@ cd
 * Install Semua Layanan VPN /Install All VPN Service
    
 ```html
-rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
-  
+rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/titis69/scrip_cloud/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+ 
 ```
-  
+ 
 
 ### 4. DONE / SELESAI
 <img src="https://img.shields.io/badge/DONE%20_/_%20SELESAI-green">
@@ -241,7 +241,7 @@ reboot
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN (OPEN HTTP PUNCHER)
 
-• XRAY VMESS 
+• XRAY VMESS
 
 • XRAY VLESS
 
@@ -251,7 +251,7 @@ reboot
 
 • XRAY VLESS GRPC
 
-• SHADOWSOCKS 
+• SHADOWSOCKS
 
 • SHADOWSOCKS OBFS
 
@@ -289,80 +289,80 @@ reboot
 
 # Service & Port
 
-• SlowDNS                   : All Port SSH
+• SlowDNS               	: All Port SSH
 
-• OpenSSH                   : 22, 2253
+• OpenSSH               	: 22, 2253
 
-• Dropbear                  : 443, 109, 143, 1153
+• Dropbear              	: 443, 109, 143, 1153
 
-• Stunnel5                  : 443, 445, 777
+• Stunnel5              	: 443, 445, 777
 
-• OpenVPN                   : TCP 1194, UDP 2200, SSL 990
+• OpenVPN               	: TCP 1194, UDP 2200, SSL 990
 
-• Websocket SSH TLS         : 443
+• Websocket SSH TLS     	: 443
 
-• Websocket SSH HTTP        : 8880
+• Websocket SSH HTTP    	: 8880
 
-• Websocket OpenVPN         : 2086
+• Websocket OpenVPN     	: 2086
 
-• Squid Proxy               : 3128, 8080 [OFF]
+• Squid Proxy           	: 3128, 8080 [OFF]
 
-• Badvpn                    : 7100, 7200, 7300
+• Badvpn                	: 7100, 7200, 7300
 
-• Nginx                     : 89
+• Nginx                 	: 89
 
-• Wireguard                 : 7070
+• Wireguard             	: 7070
 
-• L2TP/IPSEC VPN            : 1701
+• L2TP/IPSEC VPN        	: 1701
 
-• PPTP VPN                  : 1732
+• PPTP VPN              	: 1732
 
-• SSTP VPN                  : 444
+• SSTP VPN              	: 444
 
-• Shadowsocks-R             : 1443-1543
+• Shadowsocks-R         	: 1443-1543
 
-• SS-OBFS TLS               : 2443-2543
+• SS-OBFS TLS           	: 2443-2543
 
-• SS-OBFS HTTP              : 3443-3543
+• SS-OBFS HTTP          	: 3443-3543
 
-• XRAYS Vmess TLS           : 8443
+• XRAYS Vmess TLS       	: 8443
 
-• XRAYS Vmess None TLS      : 80
+• XRAYS Vmess None TLS  	: 80
 
-• XRAYS Vless TLS           : 8443
+• XRAYS Vless TLS       	: 8443
 
-• XRAYS Vless None TLS      : 80
+• XRAYS Vless None TLS  	: 80
 
-• XRAYS Trojan              : 2083
+• XRAYS Trojan          	: 2083
 
-• XRAYS Vmess GRPC TLS      : 1180,3380
+• XRAYS Vmess GRPC TLS  	: 1180,3380
 
-• XRAYS Vless GRPC TLS      : 2280,4480
+• XRAYS Vless GRPC TLS  	: 2280,4480
 
-• OHP SSH                   : 8181
+• OHP SSH               	: 8181
 
-• OHP Dropbear              : 8282
+• OHP Dropbear          	: 8282
 
-• OHP OpenVPN               : 8383
+• OHP OpenVPN           	: 8383
 
-• Trojan Go                 : 2087
+• Trojan Go             	: 2087
 
 • CloudFront Over Websocket : [OFF]
 
 
  ### Server Information & Other Features
 
-• Timezone                : Asia/Jakarta (GMT +7)
+• Timezone            	: Asia/Jakarta (GMT +7)
 
-• Fail2Ban                : [ON]
+• Fail2Ban            	: [ON]
 
-• Dflate                  : [ON]
+• Dflate              	: [ON]
 
-• IPtables                : [ON]
+• IPtables            	: [ON]
 
-• Auto-Reboot             : [ON]
+• Auto-Reboot         	: [ON]
 
-• IPv6                    : [OFF]
+• IPv6                	: [OFF]
 
 • Autoreboot On 05.00 GMT +7
 
@@ -396,3 +396,6 @@ reboot
 <img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=fisabiliyusri&layout=compact&theme=dark">
 <img height=150 src="https://github-readme-stats.vercel.app/api?username=fisabiliyusri&count_private=true&show_icons=true&theme=dark">
 <h2 align="center">
+
+
+
