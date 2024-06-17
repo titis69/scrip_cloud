@@ -17,17 +17,17 @@ mkdir -p /usr/local/bin/
 mkdir -p /etc/shadowsocks
 rm -rf /usr/bin/shadowhost
 cd /usr/bin
-wget -O addss-p "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/addss-p.sh"
+wget -O addss-p "https://raw.githubusercontent.com/titis69/scrip_cloud/main/shadowsocks-plugin/addss-p.sh"
 chmod +x addss-p
-#wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/shadowhost.sh"
+#wget -O shadowhost "https://raw.githubusercontent.com/titis69/scrip_cloud/main/shadowsocks-plugin/shadowhost.sh"
 #chmod +x shadowhost && shadowhost
-wget -O delss "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks/delss.sh"
+wget -O delss "https://raw.githubusercontent.com/titis69/scrip_cloud/main/shadowsocks/delss.sh"
 cd
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 apt install iptables iptables-persistent -y
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y
 apt install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
 apt -y install chrony
@@ -106,4 +106,7 @@ sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 #bash acme.sh --register-account -m slinfinity69@gmail.com
 #bash acme.sh --issue --standalone -d $domain --force
 #bash acme.sh --installcert -d $domain --fullchainpath /etc/shadowsocks/xray.crt --keypath /etc/shadowsocks/xray.key
+
+
+
 
