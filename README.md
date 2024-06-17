@@ -45,7 +45,15 @@ atau
 ```html
 su
 ```
+* Atau buat pasworwd root dari sini
 
+ 
+```html
+sudo su 
+```
+```html
+sudo passwd root
+```
 ### Link Video Tutorial Cara Install
 ```html
 https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
