@@ -54,6 +54,14 @@ sudo su
 ```html
 sudo passwd root
 ```
+```html
+nano /etc/ssh/sshd_config
+```
+* ubah permit
+* PermitRootLogin yes
+* PasswordAuthentication yes
+
+
 ### Link Video Tutorial Cara Install
 ```html
 https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
