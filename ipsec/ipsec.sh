@@ -1,7 +1,7 @@
 #!/bin/bash
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
-# Centos 7 & 8 64bit 
+# Centos 7 & 8 64bit
 # Mod By SL
 # SL
 # ==========================================
@@ -28,7 +28,7 @@ exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsec"
+akbarvpn="raw.githubusercontent.com/titis69/scrip_cloud/main/ipsec"
 
 VPN_IPSEC_PSK='myvpn'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
@@ -49,7 +49,7 @@ PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 bigecho "Installing packages required for the VPN..."
 if [[ ${OS} == "centos" ]]; then
 epel_url="https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm"
-yum -y install epel-release || yum -y install "$epel_url" 
+yum -y install epel-release || yum -y install "$epel_url"
 
 bigecho "Installing packages required for the VPN..."
 
@@ -60,16 +60,16 @@ REPO4='--enablerepo=PowerTools'
 
 yum -y install nss-devel nspr-devel pkgconfig pam-devel \
   libcap-ng-devel libselinux-devel curl-devel nss-tools \
-  flex bison gcc make ppp 
+  flex bison gcc make ppp
 
-yum "$REPO1" -y install xl2tpd 
+yum "$REPO1" -y install xl2tpd
 
 
 if [[ $ver == '7' ]]; then
-  yum -y install systemd-devel iptables-services 
-  yum "$REPO2" "$REPO3" -y install libevent-devel fipscheck-devel 
+  yum -y install systemd-devel iptables-services
+  yum "$REPO2" "$REPO3" -y install libevent-devel fipscheck-devel
 elif [[ $ver == '8' ]]; then
-  yum "$REPO4" -y install systemd-devel libevent-devel fipscheck-devel 
+  yum "$REPO4" -y install systemd-devel libevent-devel fipscheck-devel
 fi
 else
 apt install openssl iptables iptables-persistent -y
@@ -188,7 +188,7 @@ EOF
 
 if uname -m | grep -qi '^arm'; then
   if ! modprobe -q sha512; then
-    sed -i '/phase2alg/s/,aes256-sha2_512//' /etc/ipsec.conf
+	sed -i '/phase2alg/s/,aes256-sha2_512//' /etc/ipsec.conf
   fi
 fi
 
@@ -263,7 +263,7 @@ ms-dns 8.8.8.8
 ms-dns 8.8.4.4
 proxyarp
 lock
-nobsdcomp 
+nobsdcomp
 novj
 novjccomp
 nologfd
@@ -276,7 +276,7 @@ iptables -t nat -I POSTROUTING -s 192.168.42.0/24 -o $NET_IFACE -j MASQUERADE
 iptables -t nat -I POSTROUTING -s 192.168.41.0/24 -o $NET_IFACE -j MASQUERADE
 if [[ ${OS} == "centos" ]]; then
 service iptables save
-iptables-restore < /etc/sysconfig/iptables 
+iptables-restore < /etc/sysconfig/iptables
 else
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
@@ -311,3 +311,6 @@ wget -O /usr/bin/renewl2tp https://${akbarvpn}/renewl2tp.sh && chmod +x /usr/bin
 touch /var/lib/crot/data-user-l2tp
 touch /var/lib/crot/data-user-pptp
 rm -f /root/ipsec.sh
+
+
+
