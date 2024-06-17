@@ -4,7 +4,7 @@
 # ==========================================
 
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket"
+akbarvpn="raw.githubusercontent.com/titis69/scrip_cloud/main/websocket"
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-nontls https://${akbarvpn}/websocket.py
@@ -89,3 +89,6 @@ END
 systemctl daemon-reload
 systemctl enable ws-tls
 systemctl restart ws-tls
+
+
+
