@@ -23,7 +23,7 @@ echo -e "${NC}${LIGHT}Fuck You!!"
 exit 0
 fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/sstp"
+akbarvpn="raw.githubusercontent.com/titis69/scrip_cloud/main/sstp"
 
 MYIP=$(wget -qO- ipinfo.io/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
@@ -93,3 +93,6 @@ wget -O /usr/bin/delsstp https://${akbarvpn}/delsstp.sh && chmod +x /usr/bin/del
 wget -O /usr/bin/ceksstp https://${akbarvpn}/ceksstp.sh && chmod +x /usr/bin/ceksstp
 wget -O /usr/bin/renewsstp https://${akbarvpn}/renewsstp.sh && chmod +x /usr/bin/renewsstp
 rm -f /root/sstp.sh
+
+
+
