@@ -23,7 +23,7 @@ echo -e "${NC}${LIGHT}Fuck You!!"
 exit 0
 fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks"
+akbarvpn="raw.githubusercontent.com/titis69/scrip_cloud/main/shadowsocks"
 
 source /etc/os-release
 OS=$ID
@@ -65,14 +65,14 @@ echo "#############################################"
 echo "Konfigurasi Server."
 cat > /etc/shadowsocks-libev/config.json <<END
 {   
-    "server":"0.0.0.0",
-    "server_port":8488,
-    "password":"tes",
-    "timeout":60,
-    "method":"aes-256-cfb",
-    "fast_open":true,
-    "nameserver":"8.8.8.8",
-    "mode":"tcp_and_udp",
+	"server":"0.0.0.0",
+	"server_port":8488,
+	"password":"tes",
+	"timeout":60,
+	"method":"aes-256-cfb",
+	"fast_open":true,
+	"nameserver":"8.8.8.8",
+	"mode":"tcp_and_udp",
 }
 END
 echo "#############################################"
@@ -89,16 +89,16 @@ echo "#############################################"
 echo "buat config obfs"
 cat > /etc/shadowsocks-libev.json <<END
 {
-    "server":"127.0.0.1",
-    "server_port":8388,
-    "local_port":1080,
-    "password":"",
-    "timeout":60,
-    "method":"chacha20-ietf-poly1305",
-    "mode":"tcp_and_udp",
-    "fast_open":true,
-    "plugin":"/usr/bin/obfs-local",
-    "plugin_opts":"obfs=tls;failover=127.0.0.1:1443;fast-open"
+	"server":"127.0.0.1",
+	"server_port":8388,
+	"local_port":1080,
+	"password":"",
+	"timeout":60,
+	"method":"chacha20-ietf-poly1305",
+	"mode":"tcp_and_udp",
+	"fast_open":true,
+	"plugin":"/usr/bin/obfs-local",
+	"plugin_opts":"obfs=tls;failover=127.0.0.1:1443;fast-open"
 }
 END
 chmod +x /etc/shadowsocks-libev.json
@@ -123,3 +123,6 @@ chmod +x cekss
 chmod +x renewss
 cd
 rm -f /root/sodosok.sh
+
+
+
