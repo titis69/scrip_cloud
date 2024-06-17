@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/backup"
+akbarvpn="raw.githubusercontent.com/titis69/scrip_cloud/main/backup"
 
 apt install rclone -y
 printf "q\n" | rclone config
@@ -38,7 +38,7 @@ port 587
 auth on
 user bckupvpns@gmail.com
 from bckupvpns@gmail.com
-password Yangbaru1 
+password Yangbaru1
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
@@ -55,3 +55,6 @@ chmod +x strt
 chmod +x limitspeed
 cd
 rm -f /root/set-br.sh
+
+
+
