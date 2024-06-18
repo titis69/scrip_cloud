@@ -56,10 +56,6 @@ nano /etc/ssh/sshd_config
 * PasswordAuthentication yes
 
 
-### Link Video Tutorial Cara Install
-```html
-https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
-```
 
 ## INFO TAMBAHAN , SILAHKAN DI BACA
 * MINIMAL RAM 1 GB UNTUK MENGGUNAKAN SCRIPT INI
